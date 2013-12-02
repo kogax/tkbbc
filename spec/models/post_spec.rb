@@ -37,6 +37,15 @@ describe Post do
     end
   end
 
+  describe "#board" do
+    it "should belong to a board" do
+      @board = Board.create(title: 'hoge')
+      @post = Post.new(body: 'hoge')
+      @post.board = @board
+      expect(@post.board).to be_present
+    end
+  end
+
   describe "#update" do
     before do
       Post.create(body: 'hoge')

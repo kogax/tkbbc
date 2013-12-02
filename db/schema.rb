@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202102132) do
+ActiveRecord::Schema.define(version: 20131202110732) do
 
   create_table "boards", force: true do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20131202102132) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "board_id"
   end
 
   add_index "posts", ["id"], name: "index_posts_on_id"
