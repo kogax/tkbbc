@@ -20,7 +20,7 @@ describe Board do
       expect(@board).not_to be_valid
     end
     
-    it "should not be valid if body contains only space characters" do
+    it "should not be valid if title contains only space characters" do
       @board = Board.new(title: '  ')
       expect(@board).not_to be_valid
     end
