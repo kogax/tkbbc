@@ -5,9 +5,6 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'slim-rails'
@@ -20,6 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 group :development, :test do
+  gem 'mysql2'
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'spring'
