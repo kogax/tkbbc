@@ -3,5 +3,5 @@
 class Post < ActiveRecord::Base
   belongs_to :board
 
-  validates :body, length: {maximum: 1000}, presence: true, uniqueness: true
+  validates :body, length: {maximum: 1000}, presence: true
 end

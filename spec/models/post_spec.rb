@@ -29,12 +29,6 @@ describe Post do
       @post = Post.new(body: "\n\n")
       expect(@post).not_to be_valid
     end
-
-    it "should be valid only if body is unique" do
-      Post.create(body: 'hoge')
-      @post = Post.new(body: 'hoge')
-      expect(@post).not_to be_valid
-    end
   end
 
   describe "#board" do
