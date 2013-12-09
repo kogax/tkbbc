@@ -25,6 +25,8 @@ group :development, :test do
   gem 'spring'
   gem "spring-commands-rspec"
   gem 'travis'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 # Use jquery as the JavaScript library
