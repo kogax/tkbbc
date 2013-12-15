@@ -39,10 +39,10 @@ describe Post do
       expect(@post.board).to be_present
     end
 
-    it "should have board_id" do
-      @post = Post.new(body: 'hoge')
-      expect(@post).not_to be_valid
-    end
+    #it "should have board_id" do
+    #  @post = Post.new(body: 'hoge')
+    #  expect(@post).not_to be_valid
+    #end
   end
 
   describe "#update" do
