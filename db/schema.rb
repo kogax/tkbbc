@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20131203094609) do
     t.datetime "updated_at"
   end
 
-  add_index "boards", ["id"], name: "index_boards_on_id", using: :btree
+  add_index "boards", ["id"], name: "index_boards_on_id"
 
   create_table "posts", force: true do |t|
     t.text     "body"
@@ -28,7 +28,18 @@ ActiveRecord::Schema.define(version: 20131203094609) do
     t.integer  "board_id"
   end
 
-  add_index "posts", ["board_id"], name: "index_posts_on_board_id", using: :btree
-  add_index "posts", ["id"], name: "index_posts_on_id", using: :btree
+  add_index "posts", ["board_id"], name: "index_posts_on_board_id"
+  add_index "posts", ["id"], name: "index_posts_on_id"
+
+  create_table "replies", force: true do |t|
+    t.integer  "from_id"
+    t.integer  "to_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "replies", ["from_id"], name: "index_replies_on_from_id"
+  add_index "replies", ["to_id", "from_id"], name: "index_replies_on_to_id_and_from_id", unique: true
+  add_index "replies", ["to_id"], name: "index_replies_on_to_id"
 
 end

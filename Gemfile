@@ -17,7 +17,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 group :development, :test do
-  gem 'mysql2'
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'spring'
@@ -25,6 +24,14 @@ group :development, :test do
   gem 'travis'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+end
+
+group :deployment do
+  gem 'mysql2'
+end
+
+group :test do
+  gem 'sqlite3'
 end
 
 # Use jquery as the JavaScript library
