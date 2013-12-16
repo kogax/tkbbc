@@ -24,6 +24,7 @@ group :development, :test do
   gem 'travis'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'capybara'
 end
 
 group :deployment do

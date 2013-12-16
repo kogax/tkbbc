@@ -9,7 +9,6 @@ describe "boards/edit" do
   it "renders the edit board form" do
     render
 
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select("form[action=?][method=?]", board_path(@board), "post") do
       assert_select("label[for=?]", "board_title")
       assert_select("input[name=?][value=?]", "board[title]", valid_title)
