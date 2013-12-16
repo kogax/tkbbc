@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe "boards/show" do
+  let(:valid_title) {"valid_title"}
   before(:each) do
-    @board = assign(:board, stub_model(Board))
+    @board = assign(:board, stub_model(Board, title: valid_title))
   end
 
   it "renders attributes in <p>" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
+
+    assert_select("p", valid_title)
   end
 end
